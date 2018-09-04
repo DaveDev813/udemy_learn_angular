@@ -13,10 +13,12 @@
   type="text"
   class="form-control"
   (input)="onUpdateServerName($event)"
-  > -->
+  ></input> -->
 
   <!-- <p>{{ serverName }}</p> -->
 
+  <h4 *ngIf="servercreated; else noServer"> Server was created! name = {{ serverName }} </h4>
+  <ng-template #noServer><h4>No Server was created</h4></ng-template>
 <button
 class="btn btn-primary"
 [disabled]="!allowNewServer"
@@ -26,7 +28,9 @@ class="btn btn-primary"
 
 <!-- <h4 [innerText]="allowNewServer"></h4> -->
 
-<h4>{{serverCreationStatus}}</h4>
+<!-- <h4>{{serverCreationStatus}}</h4> -->
 
+<app-server></app-server>
+<app-server></app-server>
 <app-server></app-server>
 
