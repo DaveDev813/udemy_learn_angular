@@ -26,8 +26,8 @@ export class ParagraphComponent implements OnInit {
 
   onHide(){
     this.logCount ++;
-    this.logItems.push(this.logCount);
-    this.hideP = this.hideP ? false : true;
+    this.logItems.push(new Date());
+    this.hideP = !this.hideP;
   }
 
   public getCount(){
@@ -35,7 +35,8 @@ export class ParagraphComponent implements OnInit {
   }
 
   checkCount(ctr){
-    return (ctr > 4);
+    ctr = ctr + 1;
+    return (ctr >= 5);
   }
 
 

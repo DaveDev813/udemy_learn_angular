@@ -1,5 +1,7 @@
 
 
+  <hr>
+
   <div class="row">
     <div class="col-12">
       <button class="btn btn-success" (click)="onHide()">Display Details</button>
@@ -18,10 +20,10 @@
       <ul class="list-group">
           <li
             class="list-group-item"
-            [ngClass]="{ 'list-group-item-info': checkCount(logItem) }"
-            [ngStyle]="{ 'font-weight': checkCount(logItem) ? '900' : '100' }"
-            *ngFor="let logItem of logItems">
-            {{ logItem }}
+            [ngClass]="{ 'list-group-item-info': checkCount(i) }"
+            [ngStyle]="{ 'font-weight': checkCount(i) ? '900' : '100' }"
+            *ngFor="let logItem of logItems; let i = index">
+              {{ logItem }}
           </li>
       </ul>
     </div>
