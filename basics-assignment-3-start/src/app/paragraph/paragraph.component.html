@@ -16,7 +16,13 @@
     </div>
     <div class="col-12">
       <ul class="list-group">
-        <app-logger *ngFor="let item of logItems"></app-logger>
+          <li
+            class="list-group-item"
+            [ngClass]="{ 'list-group-item-info': checkCount(logItem) }"
+            [ngStyle]="{ 'font-weight': checkCount(logItem) ? '900' : '100' }"
+            *ngFor="let logItem of logItems">
+            {{ logItem }}
+          </li>
       </ul>
     </div>
   </div>

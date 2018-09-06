@@ -15,8 +15,9 @@ import { Component, OnInit } from '@angular/core';
 export class ParagraphComponent implements OnInit {
 
   hideP = false;
-  public logCount = 0;
+  logCount = 0;
   logItems = [];
+  isBlue = false;
 
   constructor() { }
 
@@ -31,6 +32,10 @@ export class ParagraphComponent implements OnInit {
 
   public getCount(){
     return this.logCount;
+  }
+
+  checkCount(ctr){
+    return (ctr > 4);
   }
 
 
