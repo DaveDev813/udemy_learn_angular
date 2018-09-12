@@ -1,0 +1,15 @@
+
+
+.row
+  .col-xs-12
+    button.btn.btn-success New Recipe
+hr
+.row
+  .col-xs-12
+    a.list-group-item.clearfix(href="#", *ngFor="let rec of recipes")
+      .pull-left
+        h4.list-group-item-headeing {{rec.name}}
+        p.list-group-item-text {{rec.description}}
+      span.pull-right
+        img.img-responsive([src]="rec.imagePath", alt="{{rec.name}}", style={'max-height': '50px'})
+app-recipe-item
