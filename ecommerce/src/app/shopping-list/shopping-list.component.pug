@@ -4,4 +4,6 @@
   .col-xs-10
     app-shopping-edit
     hr
-    p The List
+    ul.list-group
+      a.list-group-item(*ngFor="let ing of ingredients" style={"cursor": "pointer"}) {{ing.name}} ({{ing.amount}})
+
